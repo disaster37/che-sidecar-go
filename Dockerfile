@@ -76,10 +76,15 @@ RUN set -e \
     mkdir /.cache && chmod -R 777 /.cache && \
     wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.22.2
 
+# Add git for go mode
+RUN set -e \
+    && \
+    apk add --update git curl
+
 ENV GOPATH /go
 ENV GOCACHE /.cache
 ENV GOROOT /usr/local/go
-ENV GO111MODULE on
+ENV GO111MODULE auto
 ENV PATH $GOPATH/bin:$GOROOT/bin:$PATH
 
 ADD etc/entrypoint.sh /entrypoint.sh

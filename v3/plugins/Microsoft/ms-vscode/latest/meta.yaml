@@ -1,0 +1,21 @@
+apiVersion: v2
+publisher: jpogran
+name: ms-vscode
+version: latest
+type: VS Code extension
+displayName: Puppet extension for Visual Studio Code
+title: Go extension for Visual Studio Code
+description: This extension adds rich language support for the Go language to VS Code.
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+repository: https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go
+category: Language
+spec:
+  containers:
+  - image: webcenter/che-remote-plugin-go:latest
+    memoryLimit: "1024Mi"
+    name: vscode-go
+    env:
+      - name: GOPATH
+        value: /go:$(CHE_PROJECTS_ROOT)
+  extensions:
+  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/Go/0.13.0/vspackage
