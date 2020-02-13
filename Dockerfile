@@ -84,7 +84,7 @@ RUN set -e \
 ENV GOPATH /go
 ENV GOCACHE /.cache
 ENV GOROOT /usr/local/go
-ENV GO111MODULE auto
+ENV GO111MODULE on
 ENV PATH $GOPATH/bin:$GOROOT/bin:$PATH
 
 ADD etc/entrypoint.sh /entrypoint.sh
