@@ -16,6 +16,6 @@ spec:
     name: vscode-go
     env:
       - name: GOPATH
-        value: /go:$(CHE_PROJECTS_ROOT)
+        value: /go:$(CHE_PROJECTS_ROOT)/go
   extensions:
   - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/Go/0.13.0/vspackage
