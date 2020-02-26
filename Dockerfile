@@ -43,7 +43,7 @@ RUN set -e \
         x86) export GO386='387' ;; \
     esac \
     && \
-    wget -qO- https://dl.google.com/go/go1.12.9.linux-amd64.tar.gz | tar xvz -C /usr/local && \
+    wget -qO- https://dl.google.com/go/go1.13.8.linux-amd64.tar.gz | tar xvz -C /usr/local && \
     cd /usr/local/go/src &&    ./make.bash && \
     rm -rf /usr/local/go/pkg/bootstrap /usr/local/go/pkg/obj && \
     export GOPATH="/go" && \
