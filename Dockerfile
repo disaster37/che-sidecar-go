@@ -49,28 +49,28 @@ RUN set -e \
     export GOPATH="/go" && \
     mkdir -p "$GOPATH/src" "$GOPATH/bin" "$GOPATH/pkg" && \
     export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH" && \
-    go get -u -v github.com/ramya-rao-a/go-outline && \
-    go get -u -v github.com/acroca/go-symbols &&  \
-    go get -u -v github.com/stamblerre/gocode &&  \
-    go get -u -v github.com/rogpeppe/godef && \
-    go get -u -v golang.org/x/tools/cmd/godoc && \
-    go get -u -v github.com/zmb3/gogetdoc && \
-    go get -u -v golang.org/x/lint/golint && \
-    go get -u -v github.com/fatih/gomodifytags &&  \
-    go get -u -v golang.org/x/tools/cmd/gorename && \
-    go get -u -v sourcegraph.com/sqs/goreturns && \
-    go get -u -v golang.org/x/tools/cmd/goimports && \
-    go get -u -v github.com/cweill/gotests/... && \
-    go get -u -v golang.org/x/tools/cmd/guru && \
-    go get -u -v github.com/josharian/impl && \
-    go get -u -v github.com/haya14busa/goplay/cmd/goplay && \
-    go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct && \
-    go get -u -v github.com/go-delve/delve/cmd/dlv && \
-    go get -u -v github.com/rogpeppe/godef && \
-    go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs && \
-    go get -u -v golang.org/x/tools/cmd/gotype && \
-    GO111MODULE=on go get -v golang.org/x/tools/gopls@latest && \
-    go build -o /go/bin/gocode-gomod github.com/stamblerre/gocode && \
+    go get -u -v github.com/ramya-rao-a/go-outline@latest && \
+    go get -u -v github.com/acroca/go-symbols@latest &&  \
+    go get -u -v github.com/stamblerre/gocode@latest &&  \
+    go get -u -v github.com/rogpeppe/godef@latest && \
+    go get -u -v golang.org/x/tools/cmd/godoc@latest && \
+    go get -u -v github.com/zmb3/gogetdoc@latest && \
+    go get -u -v golang.org/x/lint/golint@latest && \
+    go get -u -v github.com/fatih/gomodifytags@latest &&  \
+    go get -u -v golang.org/x/tools/cmd/gorename@latest && \
+    go get -u -v sourcegraph.com/sqs/goreturns@latest && \
+    go get -u -v golang.org/x/tools/cmd/goimports@latest && \
+    go get -u -v github.com/cweill/gotests@latest && \
+    go get -u -v golang.org/x/tools/cmd/guru@latest && \
+    go get -u -v github.com/josharian/impl@latest && \
+    go get -u -v github.com/haya14busa/goplay/cmd/goplay@latest && \
+    go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct@latest && \
+    go get -u -v github.com/go-delve/delve/cmd/dlv@latest && \
+    go get -u -v github.com/rogpeppe/godef@latest && \
+    go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs@v2 && \
+    go get -u -v golang.org/x/tools/cmd/gotype@latest && \
+    go get -u -v golang.org/x/tools/gopls@latest && \
+    go get -u -v github.com/stamblerre/gocode@latest && \
     chmod -R 777 "$GOPATH" && \
     apk del .build-deps && \
     mkdir /.cache && chmod -R 777 /.cache && \
